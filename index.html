@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+
+    <main>
+        <section class="tabs-wrapper">
+               <div class="tab-area">
+                  <button class="tab-btn active">1</button>
+                   <div class="text">
+                     <span>STEP 1</span>
+                      Your info
+                   </div>
+               </div>
+               <div class="tab-area">
+                <button class="tab-btn" >2</button>
+                 <div class="text">
+                   <span>STEP 2</span>
+                    Select plan
+                 </div>
+             </div>
+             <div class="tab-area">
+                <button class="tab-btn">3</button>
+                 <div class="text">
+                   <span>STEP 3</span>
+                    Add-ons
+                 </div>
+             </div>
+             <div class="tab-area">
+                <button class="tab-btn">4</button>
+                 <div class="text">
+                   <span>STEP 4</span>
+                    Summary 
+                 </div>
+             </div>
+
+        </section>
+
+        <section class="content-wrapper">
+            <div class="content-box active">
+                <div class="step-one">
+                       <h2>Personal info</h2>
+                        <p>Please provide your name, email address, and phone number.</p>
+                        <form method="post" id="myform"  novalidate >
+                            <div class="form-control">
+                                <div>
+                                    <label for="name">Name</label>  
+                                    <span class="err-txt">This field is required</span>
+                                </div>
+                                <input type="text" name="name" placeholder="e.g. Stephen King" required>
+                            </div>
+                            <div class="form-control">
+                                <div>
+                                    <label for="email">Email Address</label>  
+                                    <span class="err-txt">This field is required</span>
+                                </div>
+                                <input type="email"  name="email" placeholder="e.g. stephenking@lorem.com" required>
+                            </div>
+                            <div class="form-control">
+                                <div>
+                                    <label for="number">Phone Number</label>  
+                                    <span class="err-txt">This field is required</span>
+                                </div>
+                                <input type="text"  name="number" pattern="^\+?\d+$" placeholder="e.g. +1 234 567 890" required>
+                            </div>
+                          </form>
+                    </div>
+
+                        <div class="btn-area">
+                              <div></div>
+                              <button type="submit" id="submit-form" form="myform" class="next">Next Step</button>
+                        </div>
+            </div>
+
+
+
+              <!---step two-->
+              <div class="content-box">
+                <div class="step-two">
+                           <h2>Select your plan</h2>
+                           <p>You have the option of monthly or yearly billing.</p>
+
+                            <div class="item-wrapper">
+                               <div class="item active">
+                                   <img src="images/icon-arcade.svg" alt="Arcade">
+
+                                     <div class="sm-txt">
+                                        <h3>Arcade </h3> 
+                                         <span class="price">$9/mo</span>
+                                         <span class="free">2 months free</span>
+                                     </div>
+                               </div>
+                               <div class="item">
+                                   <img src="images/icon-advanced.svg" alt="Advanced">
+
+                                     <div class="sm-txt">
+                                        <h3>Advanced </h3> 
+                                         <span class="price">$12/mo</span>
+                                         <span class="free">2 months free</span>
+                                     </div>
+                               </div>
+                               <div class="item">
+                                   <img src="images/icon-pro.svg" alt="Pro">
+
+                                     <div class="sm-txt">
+                                        <h3>Pro </h3> 
+                                         <span class="price">$15/mo</span>
+                                         <span class="free">2 months free</span>
+                                     </div>
+                               </div>
+                            </div>
+
+                            <div class="switch">
+                                 <span>Monthly</span>
+                                 
+                                 <label class="toggle">
+                                    <input type="checkbox" id="checked">
+                                    <span class="slider"></span>
+                                 </label>
+
+                                 <span>Yearly</span>
+                                 
+                            </div>
+                   </div>
+                   <div class="btn-area">
+                           <button class="prev">Go Back</button>
+                           <button class="next">Next Step</button>
+                   </div>
+               </div>
+
+
+
+
+
+               <!----step three-->
+            <div class="content-box">
+                <div class="step-three">
+                     <h2>Pick add-ons</h2>
+                     <p>  
+                         Add-ons help enhance your gaming experience.
+                     </p>
+
+                      <div class="item-wrapper">
+                         <div class="item">
+
+                               <input type="checkbox" checked> 
+
+                               <div class="sm-txt">
+                                  <h3>Online service </h3> 
+                                   <span>Access to multiplayer games</span>
+                               </div>
+                                
+                               <span class="price">+$1/mo</span>
+                         </div>
+                         <div class="item">
+                               <input type="checkbox" checked> 
+
+                               <div class="sm-txt">
+                                  <h3>Larger storage </h3> 
+                                   <span> Extra 1TB of cloud save</span>
+                               </div>
+                                
+                               <span class="price">+$2/mo</span>
+
+                         </div>
+                         <div class="item">
+                             <input type="checkbox"> 
+
+                             <div class="sm-txt">
+                                <h3>Customizable profile</h3> 
+                                 <span>Custom theme on your profile</span>
+                             </div>
+                              
+                             <span class="price">+$2/mo</span>
+                         </div>
+                      </div>
+             </div>
+
+
+         <div class="btn-area" >
+             <button class="prev" >Go Back</button>
+             <button class="next" >Next Step</button>
+         </div>
+      </div>
+
+
+
+
+      <!--step four-->
+
+      <div class="content-box">
+        <div class="step-four">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming.</p>    
+
+             <div class="check-out">
+    <!--
+                <div class="item">
+                      <div class="sm-txt">
+                         <h3>Arcade (Monthly)</h3> 
+                          <a href="#" id="change">Change</a>
+                      </div>
+                       
+                      <span class="price">$90/yr</span>
+                </div>
+                <div class="item">
+
+                      <span>Online service</span>
+                      <span class="price">+$90/yr</span>
+                </div>
+                <div class="item">
+                    <span>Larger storage</span>
+                     
+                    <span class="price">+$20/yr</span>
+                </div>
+             </div>
+      --> 
+         </div>
+
+         <div class="total">
+            <span>Total(per month)</span>
+             <span class="price">+$12/mo</span>
+         </div>
+        </div>
+
+
+        <div class="btn-area">
+            <button class="prev">Go Back</button>
+            <button class="next done" id="confirm">Confirm</button>
+        </div>
+
+
+             <!--
+                  <div class="notify">
+                         <img src="images/icon-thank-you.svg" alt="checkmark">
+
+                         <h2>Thank you!</h2>
+                         <p>
+                            Thanks for confirming your subscription! We hope you have fun 
+                            using our platform. If you ever need support, please feel free 
+                            to email us at support@loremgaming.com.
+                        </p>
+                        
+                  </div>
+                -->
+    </section>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
